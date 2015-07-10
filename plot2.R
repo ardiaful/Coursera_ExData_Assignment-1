@@ -2,7 +2,7 @@
 data <- read.table("household_power_consumption.txt", header=TRUE, sep=";",
                    stringsAsFactors=FALSE, na.strings=c("?"))
 
-# Subset data from big data file from two days
+# Subset data from big data file from two dates
 subdata <- data[data$Date == "1/2/2007" | data$Date == "2/2/2007", ]
 
 # Create a new column with the combined date and time
