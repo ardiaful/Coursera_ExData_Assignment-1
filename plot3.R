@@ -10,7 +10,7 @@ subdata$datetime <- mapply(function(s1, s2){as.POSIXct(paste(s1, s2), format = "
 
 #Create and save the plot file
 png("plot3.png", width= 480, height = 480)
-plot(subdata$datetime, subdata$Sub_metering_1, type="l", xaxt = "n", ylab = "Energy submetering", xlab = "")
+plot(subdata$datetime, subdata$Sub_metering_1, type="l", xlab = "", ylab = "Energy submetering", xaxt = "n")
 lines(subdata$datetime, subdata$Sub_metering_2, col = "red")
 lines(subdata$datetime, subdata$Sub_metering_3, col = "blue")
 axis.POSIXct(1, as.POSIXct(subdata$datetime, origin="1970-01-01"))
